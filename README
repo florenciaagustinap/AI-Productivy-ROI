@@ -76,7 +76,7 @@ Tabla de hechos:
 El análisis se encuentra implementado en un informe de Power BI.
 ##Dashboard
 
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./Screenshots/Dashboard.png)
 
 El dashboard presenta una visión ejecutiva de los principales indicadores y permite explorar la información mediante filtros y diferentes dimensiones de análisis.
 
