@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "9885a1d3e1b4cf397f63",
+  "position": {
+    "x": 10,
+    "y": 56,
+    "z": 0,
+    "width": 410,
+    "height": 22,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Ranking de empleados por valor generado",
+                    "textStyle": {
+                      "fontSize": "12px",
+                      "fontWeight": "bold",
+                      "color": "#0F172A",
+                      "fontFamily": "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

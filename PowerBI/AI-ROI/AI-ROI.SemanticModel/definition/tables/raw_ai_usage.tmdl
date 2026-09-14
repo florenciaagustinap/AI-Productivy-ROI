@@ -1,0 +1,283 @@
+table raw_ai_usage
+	isHidden
+	lineageTag: bb80ae42-a7af-41db-8f82-8f23e65bab10
+
+	column UsageID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c1358b2-504f-4c6a-8fd7-dddbb0736288
+		summarizeBy: none
+		sourceColumn: UsageID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 904c583b-8357-416a-8740-ccecdfc994a5
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variación
+			isDefault
+			relationship: 63d2ee9a-9972-4c6c-b1cd-2687d3e8d8b7
+			defaultHierarchy: LocalDateTable_f506c2d1-b80b-4f1e-b4dc-dca712a44e9f.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 81cbdbbc-4f87-4e87-a67d-67b30ba2db7c
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 9665a366-3572-4905-89ee-13ee4fea8ffe
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 11d2511b-9ce0-44cc-8654-9719bd6ee4fc
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: 254aa430-0dd9-46cb-9d70-acbd9ce3db6d
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeID
+		dataType: int64
+		formatString: 0
+		lineageTag: add01467-329a-414c-8a36-6b3f5fde1702
+		summarizeBy: count
+		sourceColumn: EmployeeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeName
+		dataType: string
+		lineageTag: 9ddbf07b-993b-4449-81a3-d99ecc9f3afb
+		summarizeBy: none
+		sourceColumn: EmployeeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentID
+		dataType: int64
+		formatString: 0
+		lineageTag: 978ae009-3bd5-46a7-b53c-64ab0d786236
+		summarizeBy: count
+		sourceColumn: DepartmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentName
+		dataType: string
+		lineageTag: c2d62b3b-7703-4a29-9368-af08d1612dc0
+		summarizeBy: none
+		sourceColumn: DepartmentName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Position
+		dataType: string
+		lineageTag: 87e967cd-9e93-4c2c-a730-6ca13d65e3d6
+		summarizeBy: none
+		sourceColumn: Position
+
+		annotation SummarizationSetBy = Automatic
+
+	column HireDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 71f4b430-ad1c-4526-9d3a-980b29cc7f16
+		summarizeBy: none
+		sourceColumn: HireDate
+
+		variation Variación
+			isDefault
+			relationship: 395e67f4-5928-41e7-8745-469cc9603e32
+			defaultHierarchy: LocalDateTable_f229d9a5-b6d1-454e-b10e-5d53137c869b.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column HourlyRate
+		dataType: int64
+		formatString: 0
+		lineageTag: 8aaa581b-f9fb-4943-9733-dde196aea018
+		summarizeBy: sum
+		sourceColumn: HourlyRate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ToolID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c7d8b41-be73-4400-8d57-c6ec459308c0
+		summarizeBy: count
+		sourceColumn: ToolID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ToolName
+		dataType: string
+		lineageTag: 0dc008f9-278b-4e62-a9f0-5215c5510706
+		summarizeBy: none
+		sourceColumn: ToolName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendor
+		dataType: string
+		lineageTag: 824b0567-79a0-4559-aaa1-4aaab8f451d1
+		summarizeBy: none
+		sourceColumn: Vendor
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyLicenseCost
+		dataType: int64
+		formatString: 0
+		lineageTag: c224173f-950d-441d-9204-7aa254e985cd
+		summarizeBy: sum
+		sourceColumn: MonthlyLicenseCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksBeforeAI
+		dataType: int64
+		formatString: 0
+		lineageTag: 0eb5bd96-8b69-4be9-8f41-7061a30eda18
+		summarizeBy: sum
+		sourceColumn: TasksBeforeAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksAfterAI
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ac275f6-3050-4c63-a4ab-c5d174731d91
+		summarizeBy: sum
+		sourceColumn: TasksAfterAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column HoursBeforeAI
+		dataType: double
+		lineageTag: c3caab69-3c84-4819-b607-3ceda5a891ee
+		summarizeBy: sum
+		sourceColumn: HoursBeforeAI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column HoursAfterAI
+		dataType: double
+		lineageTag: 13c30f19-839c-4d79-923b-a437b9895a38
+		summarizeBy: sum
+		sourceColumn: HoursAfterAI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProcessesAutomated
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c045570-bfa3-496d-a13a-7a4e0451a766
+		summarizeBy: sum
+		sourceColumn: ProcessesAutomated
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyToolCost
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e221c27-25b6-495b-b212-704ad2e26ab7
+		summarizeBy: sum
+		sourceColumn: MonthlyToolCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksIncrease
+		dataType: int64
+		formatString: 0
+		lineageTag: 0fa6a971-197e-41e8-a9d0-5a029d258a60
+		summarizeBy: sum
+		sourceColumn: TasksIncrease
+
+		annotation SummarizationSetBy = Automatic
+
+	column HoursSaved
+		dataType: double
+		lineageTag: b94eabad-03cd-41a4-842e-b49d8a3d6310
+		summarizeBy: sum
+		sourceColumn: HoursSaved
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductivityLiftPct
+		dataType: double
+		lineageTag: 01245572-8580-4ae5-a8e5-e28930397e85
+		summarizeBy: sum
+		sourceColumn: ProductivityLiftPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EstimatedValue
+		dataType: double
+		lineageTag: 8d6ff4d6-a915-49ba-b08b-b19713b5ee1d
+		summarizeBy: sum
+		sourceColumn: EstimatedValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EstimatedROI
+		dataType: double
+		lineageTag: ac7129a2-9e44-4ab1-bed8-a88e5fbcab25
+		summarizeBy: sum
+		sourceColumn: EstimatedROI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition raw_ai_usage = m
+		mode: import
+		source =
+				let
+				    Origen = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"ai-productivity-roi_Database" = Origen{[Name="ai-productivity-roi",Kind="Database"]}[Data],
+				    ai_productivity_Schema = #"ai-productivity-roi_Database"{[Name="ai_productivity",Kind="Schema"]}[Data],
+				    raw_ai_usage_Table = ai_productivity_Schema{[Name="raw_ai_usage",Kind="Table"]}[Data]
+				in
+				    raw_ai_usage_Table
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "17b94caabb35b0ba6794",
+  "position": {
+    "x": 10,
+    "y": 448,
+    "z": 0,
+    "height": 260,
+    "width": 620,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "vw_ai_productivity (grano evento): HoursBeforeAI/HoursAfterAI/HoursSaved (horas), TasksBeforeAI/TasksAfterAI/TasksIncrease (tareas), ProcessesAutomated, ProductivityLiftPct. vw_ai_productivity_curated: igual a lo anterior más EmployeeName, Position, DepartmentName, ToolName, HourlyRate, AutomationRatePct, EstimatedProductivityValue (denormalizado para análisis por empleado). vw_dashboard_roi (grano Año-Mes-Herramienta): ai_cost (costo mensual de licencia), estimated_value, net_value, roi_pct, months_with_usage — fuente única de verdad para costo y ROI, ya deduplicada. dim_ai_tool.MonthlyLicenseCost: costo fijo mensual por herramienta (ChatGPT, Microsoft Copilot, Gemini, Claude) — no varía por empleado ni por mes.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "10px",
+                      "color": "#5b6478"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

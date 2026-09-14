@@ -1,0 +1,117 @@
+table _Medidas
+	lineageTag: f1aa2ac0-f3f3-49f0-82c1-98ac701e7621
+
+	measure 'Total de Registros' = COUNTROWS ( vw_ai_productivity )
+		formatString: #,##0
+		displayFolder: Productividad
+		lineageTag: ce0e21bd-f8b0-42c3-9c7b-ad94446fddb2
+
+	measure 'Horas Ahorradas' = SUM ( vw_ai_productivity[HoursSaved] )
+		formatString: #,##0.00" h"
+		displayFolder: Productividad
+		lineageTag: bbb81500-2ab7-43cd-bace-db93b0609f14
+
+	measure 'Horas Ahorradas Promedio' = DIVIDE ( [Horas Ahorradas], [Total de Registros] )
+		formatString: #,##0.00" h"
+		displayFolder: Productividad
+		lineageTag: 9f6ee6ec-c502-4eb9-b4a5-dcbced2ab376
+
+	measure 'Productividad % Promedio' = AVERAGE ( vw_ai_productivity[ProductivityLiftPct] )
+		formatString: #,##0.00" %"
+		displayFolder: Productividad
+		lineageTag: 154b0736-4e44-42bc-8967-adce3aa37740
+
+	measure 'Procesos Automatizados' = SUM ( vw_ai_productivity[ProcessesAutomated] )
+		formatString: #,##0
+		displayFolder: Productividad
+		lineageTag: 20fa1182-9b86-48fe-9612-3e74d76960d6
+
+	measure 'Incremento de Tareas' = SUM ( vw_ai_productivity[TasksIncrease] )
+		formatString: #,##0
+		displayFolder: Productividad
+		lineageTag: 728674b2-02e7-496f-ac3e-0bb62b809a12
+
+	measure 'Horas Antes de IA' = SUM ( vw_ai_productivity[HoursBeforeAI] )
+		formatString: #,##0.00" h"
+		displayFolder: Productividad
+		lineageTag: 39794864-4734-4b6a-bc88-ba8a250f7559
+
+	measure 'Horas Después de IA' = SUM ( vw_ai_productivity[HoursAfterAI] )
+		formatString: #,##0.00" h"
+		displayFolder: Productividad
+		lineageTag: a2295580-408c-4cc6-8f98-237cf61b863a
+
+	measure '% Automatización Promedio' = AVERAGE ( vw_ai_productivity_curated[AutomationRatePct] )
+		formatString: #,##0.00" %"
+		displayFolder: Productividad
+		lineageTag: 3899e417-d1ff-4caa-bee6-e3bc6fa947f9
+
+	measure 'Costo de IA' = SUM ( vw_dashboard_roi[ai_cost] )
+		formatString: "$"#,##0
+		displayFolder: ROI
+		lineageTag: 976b1fb2-a707-412a-8640-a38c16c0f159
+
+	measure 'Valor de Productividad Estimado' = SUM ( vw_dashboard_roi[estimated_value] )
+		formatString: "$"#,##0
+		displayFolder: ROI
+		lineageTag: 18325061-b651-40b8-8efe-c9ecc8b8216b
+
+	measure 'Beneficio Neto Estimado' = [Valor de Productividad Estimado] - [Costo de IA]
+		formatString: "$"#,##0
+		displayFolder: ROI
+		lineageTag: 608ab80d-01cb-44b8-9edd-2a38e706724e
+
+	measure 'ROI Estimado %' = DIVIDE ( [Beneficio Neto Estimado], [Costo de IA] ) * 100
+		formatString: #,##0" %"
+		displayFolder: ROI
+		lineageTag: 25f3e5ae-ecc5-4edd-b1e4-ab74f81d1c29
+
+	measure 'Beneficio Neto Acumulado' = CALCULATE ( [Beneficio Neto Estimado], FILTER ( ALLSELECTED ( dim_date[Date] ), dim_date[Date] <= MAX ( dim_date[Date] ) ) )
+		formatString: "$"#,##0
+		displayFolder: ROI
+		lineageTag: a4181268-473e-4bc2-bd31-1124c9113076
+
+	measure 'Registros ROI (control)' = COUNTROWS ( vw_dashboard_roi )
+		formatString: #,##0
+		displayFolder: ROI
+		lineageTag: 441a56f6-947b-4119-b445-0f88f5573df8
+
+	measure 'Meses con Uso' = SUM ( vw_dashboard_roi[months_with_usage] )
+		formatString: #,##0
+		displayFolder: ROI
+		lineageTag: f6546a55-c0dd-447a-9033-5f308dad93c6
+
+	measure 'Valor Estimado por Empleado' = SUM ( vw_ai_productivity_curated[EstimatedProductivityValue] )
+		formatString: "$"#,##0
+		displayFolder: Detalle
+		lineageTag: 958058bd-9f28-4850-94f2-9638b11afd56
+
+	measure 'Tareas Antes de IA' = SUM ( vw_ai_productivity[TasksBeforeAI] )
+		formatString: #,##0
+		lineageTag: cdccfd30-392a-4ce5-b272-133a6cd8f030
+
+	measure 'Tareas Después de IA' = SUM ( vw_ai_productivity[TasksAfterAI] )
+		formatString: #,##0
+		lineageTag: b113870f-d09e-42ce-8fd6-3c18dcfe5a66
+
+	measure 'Tarifa Horaria Promedio' = AVERAGE ( vw_ai_productivity_curated[HourlyRate] )
+		formatString: "$"#,##0
+		lineageTag: cc72743a-12ea-4786-8b8a-e31de13fae76
+
+	measure 'Casos IA Aumento Horas' = CALCULATE ( COUNTROWS ( vw_ai_productivity ), vw_ai_productivity[HoursAfterAI] > vw_ai_productivity[HoursBeforeAI] )
+		formatString: #,##0
+		lineageTag: e8737eeb-7733-4691-b53f-135320d25faa
+
+	column Placeholder
+		isHidden
+		lineageTag: e6396052-7ce0-499a-984c-b9737d4acf8f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Placeholder]
+
+	partition _Medidas = calculated
+		mode: import
+		source = ROW("Placeholder", BLANK())
+
+	annotation PBI_Id = medidas_table
+

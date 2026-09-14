@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "e76b5d291769a9e3c2a5",
+  "displayName": "Análisis de Productividad",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

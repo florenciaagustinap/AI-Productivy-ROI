@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "ab86e066016c751374f3",
+  "position": {
+    "x": 858,
+    "y": 238,
+    "z": 0,
+    "width": 200,
+    "height": 100,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Registros ROI (control)"
+                }
+              },
+              "queryRef": "_Medidas.Registros ROI (control)",
+              "nativeQueryRef": "Registros ROI (control)"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

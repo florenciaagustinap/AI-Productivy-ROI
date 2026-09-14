@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "AI-ROI"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fa38f705-b9a5-4c1c-bbcc-6dfd9d5fb6c5"
+  }
+}

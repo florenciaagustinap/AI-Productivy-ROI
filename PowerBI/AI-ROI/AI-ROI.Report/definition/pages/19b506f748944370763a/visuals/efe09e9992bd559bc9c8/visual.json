@@ -1,0 +1,94 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "efe09e9992bd559bc9c8",
+  "position": {
+    "x": 650,
+    "y": 292,
+    "z": 0,
+    "height": 190,
+    "width": 620,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_ai_tool"
+                    }
+                  },
+                  "Property": "ToolName"
+                }
+              },
+              "queryRef": "dim_ai_tool.ToolName",
+              "nativeQueryRef": "ToolName",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "ROI Estimado %"
+                }
+              },
+              "queryRef": "_Medidas.ROI Estimado %",
+              "nativeQueryRef": "ROI Estimado %"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Costo de IA"
+                }
+              },
+              "queryRef": "_Medidas.Costo de IA",
+              "nativeQueryRef": "Costo de IA",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Valor de Productividad Estimado"
+                }
+              },
+              "queryRef": "_Medidas.Valor de Productividad Estimado",
+              "nativeQueryRef": "Valor de Productividad Estimado"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

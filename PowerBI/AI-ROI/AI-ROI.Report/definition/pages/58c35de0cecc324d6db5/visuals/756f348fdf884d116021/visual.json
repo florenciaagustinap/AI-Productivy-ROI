@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "756f348fdf884d116021",
+  "position": {
+    "x": 10,
+    "y": 284,
+    "z": 0,
+    "width": 410,
+    "height": 22,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Adopción de herramientas por empleado",
+                    "textStyle": {
+                      "fontSize": "12px",
+                      "fontWeight": "bold",
+                      "color": "#0F172A",
+                      "fontFamily": "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

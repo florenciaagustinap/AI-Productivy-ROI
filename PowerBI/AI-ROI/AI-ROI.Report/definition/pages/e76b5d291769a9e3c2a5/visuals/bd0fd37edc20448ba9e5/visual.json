@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "bd0fd37edc20448ba9e5",
+  "position": {
+    "x": 9.37792551387287,
+    "y": 506.40797774913506,
+    "z": 0,
+    "height": 34.38572688420053,
+    "width": 620.506071501255,
+    "tabOrder": 13
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Productividad (%) por puesto",
+                    "textStyle": {
+                      "fontSize": "12px",
+                      "fontWeight": "bold",
+                      "color": "#0F172A",
+                      "fontFamily": "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

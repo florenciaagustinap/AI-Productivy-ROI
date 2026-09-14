@@ -1,0 +1,75 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "b11cd4cac12829081a63",
+  "position": {
+    "x": 10,
+    "y": 308,
+    "z": 0,
+    "height": 190,
+    "width": 410,
+    "tabOrder": 9
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_employee"
+                    }
+                  },
+                  "Property": "EmployeeName"
+                }
+              },
+              "queryRef": "dim_employee.EmployeeName",
+              "nativeQueryRef": "EmployeeName",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_ai_tool"
+                    }
+                  },
+                  "Property": "ToolName"
+                }
+              },
+              "queryRef": "dim_ai_tool.ToolName",
+              "nativeQueryRef": "ToolName"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Total de Registros"
+                }
+              },
+              "queryRef": "_Medidas.Total de Registros",
+              "nativeQueryRef": "Total de Registros"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "9c4d9906f578b90b1d6b",
+  "position": {
+    "x": 1060,
+    "y": 56,
+    "z": 0,
+    "width": 202,
+    "height": 100,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "ROI Estimado %"
+                }
+              },
+              "queryRef": "_Medidas.ROI Estimado %",
+              "nativeQueryRef": "ROI Estimado %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

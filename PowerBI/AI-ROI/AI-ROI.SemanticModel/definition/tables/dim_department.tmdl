@@ -1,0 +1,33 @@
+table dim_department
+	lineageTag: 89acd327-9b32-49b1-bdc2-3561c4c7e9ea
+
+	column DepartmentID
+		dataType: int64
+		formatString: 0
+		lineageTag: 35a30708-903e-4db7-9dfb-c0b4d0edc61f
+		summarizeBy: none
+		sourceColumn: DepartmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentName
+		dataType: string
+		lineageTag: 5d4e7a63-5c60-41c4-a430-0d50bab36d16
+		summarizeBy: none
+		sourceColumn: DepartmentName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_department = m
+		mode: import
+		source =
+				let
+				    Origen = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"ai-productivity-roi_Database" = Origen{[Name="ai-productivity-roi",Kind="Database"]}[Data],
+				    ai_productivity_Schema = #"ai-productivity-roi_Database"{[Name="ai_productivity",Kind="Schema"]}[Data],
+				    dim_department_Table = ai_productivity_Schema{[Name="dim_department",Kind="Table"]}[Data]
+				in
+				    dim_department_Table
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "cb3eebbd4a4ac6494598",
+  "position": {
+    "x": 9.37792551387287,
+    "y": 84.401329624855848,
+    "z": 0,
+    "height": 190.68448544874838,
+    "width": 411.06573502476084,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Tareas Después de IA"
+                }
+              },
+              "queryRef": "_Medidas.Tareas Después de IA",
+              "nativeQueryRef": "Tareas Después de IA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Tareas Antes de IA"
+                }
+              },
+              "queryRef": "_Medidas.Tareas Antes de IA",
+              "nativeQueryRef": "Tareas Antes de IA"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Medidas"
+                  }
+                },
+                "Property": "Tareas Después de IA"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,144 @@
+table vw_ai_productivity
+	lineageTag: c81ee895-d0a4-4ee3-bae8-caa3de16e633
+
+	column UsageID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4f41eefe-d3f4-4839-b23e-96629ede3a26
+		summarizeBy: none
+		sourceColumn: UsageID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 1f7ee4f8-0bd8-496c-9a7d-58eacd6dff39
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variación
+			isDefault
+			relationship: 1bb16a90-a2b1-4a9d-b668-973b9d31473a
+			defaultHierarchy: LocalDateTable_e0044898-6805-4e11-a823-8427cbb5364c.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EmployeeID
+		dataType: int64
+		formatString: 0
+		lineageTag: cc58756c-b2ed-480a-b3ee-3e085c3cd5ae
+		summarizeBy: none
+		sourceColumn: EmployeeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentID
+		dataType: int64
+		formatString: 0
+		lineageTag: 03eb9205-9256-4305-a88a-9d65a3f6fb52
+		summarizeBy: none
+		sourceColumn: DepartmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ToolID
+		dataType: int64
+		formatString: 0
+		lineageTag: c8a1830c-4afa-4ac1-bb38-34319cd7a12a
+		summarizeBy: none
+		sourceColumn: ToolID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksBeforeAI
+		dataType: int64
+		formatString: 0
+		lineageTag: 83d8f253-4e1f-496f-bec9-fd82df6dbb8b
+		summarizeBy: sum
+		sourceColumn: TasksBeforeAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksAfterAI
+		dataType: int64
+		formatString: 0
+		lineageTag: 9faefaf4-39d5-40b8-a4d7-dfb9499e623d
+		summarizeBy: sum
+		sourceColumn: TasksAfterAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column HoursBeforeAI
+		dataType: double
+		lineageTag: 0ccb65f2-efa2-43eb-98c9-439317746fec
+		summarizeBy: sum
+		sourceColumn: HoursBeforeAI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column HoursAfterAI
+		dataType: double
+		lineageTag: c1843256-2387-4f84-9d6f-9b8b5ba6d89f
+		summarizeBy: sum
+		sourceColumn: HoursAfterAI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProcessesAutomated
+		dataType: int64
+		formatString: 0
+		lineageTag: 1429af36-8e34-4fa4-a8d3-164c3d1bafd0
+		summarizeBy: sum
+		sourceColumn: ProcessesAutomated
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksIncrease
+		dataType: int64
+		formatString: 0
+		lineageTag: a59e5a03-fff4-46aa-8401-8d8209ed761c
+		summarizeBy: sum
+		sourceColumn: TasksIncrease
+
+		annotation SummarizationSetBy = Automatic
+
+	column HoursSaved
+		dataType: double
+		lineageTag: 9edcf0e1-ba22-4077-9eb8-e729e84e5d21
+		summarizeBy: sum
+		sourceColumn: HoursSaved
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductivityLiftPct
+		dataType: double
+		lineageTag: d5fb6ecd-4787-4ca2-9670-fe7f73bdaf60
+		summarizeBy: sum
+		sourceColumn: ProductivityLiftPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition vw_ai_productivity = m
+		mode: import
+		source =
+				let
+				    Origen = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"ai-productivity-roi_Database" = Origen{[Name="ai-productivity-roi",Kind="Database"]}[Data],
+				    ai_productivity_Schema = #"ai-productivity-roi_Database"{[Name="ai_productivity",Kind="Schema"]}[Data],
+				    vw_ai_productivity_View = ai_productivity_Schema{[Name="vw_ai_productivity",Kind="View"]}[Data]
+				in
+				    vw_ai_productivity_View
+
+	annotation PBI_ResultType = Table
+

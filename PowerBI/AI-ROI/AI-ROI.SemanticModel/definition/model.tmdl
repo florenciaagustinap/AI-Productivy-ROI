@@ -1,0 +1,38 @@
+model Model
+	culture: es-AR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-AR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["vw_ai_productivity","vw_ai_productivity_curated","vw_ai_roi","vw_dashboard_roi","dim_ai_tool","dim_date","dim_department","dim_employee","fact_ai_usage","raw_ai_usage","stg_ai_usage"]
+
+annotation PBI_ProTooling = ["DevMode","MCP-PBIModeling"]
+
+ref table vw_ai_productivity
+ref table DateTableTemplate_11b9951e-1ab6-4e8a-a099-81dc6693e3a2
+ref table LocalDateTable_e0044898-6805-4e11-a823-8427cbb5364c
+ref table vw_ai_productivity_curated
+ref table LocalDateTable_01265b39-fa97-4c34-8695-f5b146e9c986
+ref table vw_ai_roi
+ref table vw_dashboard_roi
+ref table dim_ai_tool
+ref table dim_date
+ref table LocalDateTable_517aab33-8d77-4ec5-ab98-672dc66e392f
+ref table dim_department
+ref table dim_employee
+ref table LocalDateTable_88283095-a40d-47c4-b608-2641bd78079c
+ref table fact_ai_usage
+ref table LocalDateTable_ecc5d65b-8373-4c3b-bdc4-aed7daf85e85
+ref table raw_ai_usage
+ref table LocalDateTable_f506c2d1-b80b-4f1e-b4dc-dca712a44e9f
+ref table LocalDateTable_f229d9a5-b6d1-454e-b10e-5d53137c869b
+ref table stg_ai_usage
+ref table LocalDateTable_36ea0cae-b135-45e2-8f2b-ed2b51d2005c
+ref table _Medidas
+
+ref cultureInfo es-AR
+

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "5a4ae72ed8a55f6e5031",
+  "position": {
+    "x": 650,
+    "y": 268,
+    "z": 0,
+    "width": 620,
+    "height": 22,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Posicionamiento costo–valor por herramienta",
+                    "textStyle": {
+                      "fontSize": "12px",
+                      "fontWeight": "bold",
+                      "color": "#0F172A",
+                      "fontFamily": "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "a77bfb090dadf7e58458",
+  "position": {
+    "x": 650,
+    "y": 506,
+    "z": 0,
+    "width": 620,
+    "height": 22,
+    "tabOrder": 15
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Madurez de automatización en el tiempo",
+                    "textStyle": {
+                      "fontSize": "12px",
+                      "fontWeight": "bold",
+                      "color": "#0F172A",
+                      "fontFamily": "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

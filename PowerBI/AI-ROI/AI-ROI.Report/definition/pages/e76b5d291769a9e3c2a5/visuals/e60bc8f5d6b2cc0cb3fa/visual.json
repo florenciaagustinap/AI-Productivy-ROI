@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "e60bc8f5d6b2cc0cb3fa",
+  "position": {
+    "x": 7.8149379282273932,
+    "y": 315.72349230038668,
+    "z": 0,
+    "height": 190.68448544874838,
+    "width": 411.06573502476084,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_ai_tool"
+                    }
+                  },
+                  "Property": "ToolName"
+                }
+              },
+              "queryRef": "dim_ai_tool.ToolName",
+              "nativeQueryRef": "ToolName",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Productividad % Promedio"
+                }
+              },
+              "queryRef": "_Medidas.Productividad % Promedio",
+              "nativeQueryRef": "Productividad % Promedio"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,286 @@
+table vw_ai_productivity_curated
+	lineageTag: 82460ab6-41f7-4d11-839f-37fd5d5f60d1
+
+	column UsageID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2db61b97-1129-4208-97ef-3d643f790552
+		summarizeBy: none
+		sourceColumn: UsageID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: b96ed78e-31e5-4f16-9f83-359238af558a
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variación
+			isDefault
+			relationship: ce26fc6f-ac4c-4ff8-b6dd-dd0f869dc869
+			defaultHierarchy: LocalDateTable_01265b39-fa97-4c34-8695-f5b146e9c986.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a7a22ab-2a46-43ed-8f71-8b8a4a5b2218
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: b59ad493-e30b-48bd-831c-fb5127caf2e9
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 4dcc1c3a-9310-4510-b894-b1616244bc2b
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: d618df58-6ba5-440e-b53c-118878f4720c
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 89197479-0544-4b4d-aea0-8641ff841111
+		summarizeBy: count
+		sourceColumn: EmployeeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmployeeName
+		dataType: string
+		lineageTag: 38cc4a93-bee1-491b-9386-76428695d2c9
+		summarizeBy: none
+		sourceColumn: EmployeeName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Position
+		dataType: string
+		lineageTag: e932756d-486d-46bf-a7a9-42ef6a9901b4
+		summarizeBy: none
+		sourceColumn: Position
+
+		annotation SummarizationSetBy = Automatic
+
+	column HourlyRate
+		dataType: int64
+		formatString: 0
+		lineageTag: 579477ab-144d-4956-8bbd-e4b53a899fe8
+		summarizeBy: sum
+		sourceColumn: HourlyRate
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentID
+		dataType: int64
+		formatString: 0
+		lineageTag: 37dc1a63-2786-4887-b639-5a88d006c1a0
+		summarizeBy: count
+		sourceColumn: DepartmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentName
+		dataType: string
+		lineageTag: f223a356-9d03-4ee0-ab96-853a49f24a5f
+		summarizeBy: none
+		sourceColumn: DepartmentName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ToolID
+		dataType: int64
+		formatString: 0
+		lineageTag: 50938462-b07a-4b71-a3fa-c230eed5f245
+		summarizeBy: count
+		sourceColumn: ToolID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ToolName
+		dataType: string
+		lineageTag: bb51c835-00ed-48e9-8ec7-70970f9f4afc
+		summarizeBy: none
+		sourceColumn: ToolName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendor
+		dataType: string
+		lineageTag: 1e555230-cd94-4166-b876-1d383a0d4e75
+		summarizeBy: none
+		sourceColumn: Vendor
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyLicenseCost
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d4d3f62-60f8-420b-8408-001f7cec7ee7
+		summarizeBy: none
+		sourceColumn: MonthlyLicenseCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksBeforeAI
+		dataType: int64
+		formatString: 0
+		lineageTag: 55666845-d384-4416-ac34-7224701bec9d
+		summarizeBy: sum
+		sourceColumn: TasksBeforeAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksAfterAI
+		dataType: int64
+		formatString: 0
+		lineageTag: 77c67967-a342-4bf4-bca0-868499644068
+		summarizeBy: sum
+		sourceColumn: TasksAfterAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksIncrease
+		dataType: int64
+		formatString: 0
+		lineageTag: 152343d2-6c30-45e0-9617-5511a2a33011
+		summarizeBy: sum
+		sourceColumn: TasksIncrease
+
+		annotation SummarizationSetBy = Automatic
+
+	column HoursBeforeAI
+		dataType: double
+		lineageTag: 4f5672f1-bbb9-4862-8131-843e0ef97692
+		summarizeBy: sum
+		sourceColumn: HoursBeforeAI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column HoursAfterAI
+		dataType: double
+		lineageTag: a97713ce-aa03-4f08-86c2-3bcb7b6858fb
+		summarizeBy: sum
+		sourceColumn: HoursAfterAI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column HoursSaved
+		dataType: double
+		lineageTag: 62637ddd-91d8-4857-bacd-f281f732d578
+		summarizeBy: sum
+		sourceColumn: HoursSaved
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductivityLiftPct
+		dataType: double
+		lineageTag: 88593b49-e9ac-4c17-91ad-56854055da8c
+		summarizeBy: sum
+		sourceColumn: ProductivityLiftPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProcessesAutomated
+		dataType: int64
+		formatString: 0
+		lineageTag: 2a38b488-fe0c-486d-a3b2-d68a2d2f3023
+		summarizeBy: sum
+		sourceColumn: ProcessesAutomated
+
+		annotation SummarizationSetBy = Automatic
+
+	column AutomationRatePct
+		dataType: double
+		lineageTag: 75c215f4-fc71-4aa6-9a41-6f34d54d85e1
+		summarizeBy: sum
+		sourceColumn: AutomationRatePct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EstimatedProductivityValue
+		dataType: double
+		lineageTag: 64344fac-4935-4497-9673-3fccf8229414
+		summarizeBy: sum
+		sourceColumn: EstimatedProductivityValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AICost
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a4c7f23-60e2-474e-a22d-55cdb25e1d40
+		summarizeBy: none
+		sourceColumn: AICost
+
+		annotation SummarizationSetBy = Automatic
+
+	column NetValue
+		dataType: double
+		lineageTag: 35360302-795f-48d3-8cfb-c0a9f6986f43
+		summarizeBy: none
+		sourceColumn: NetValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ROIPct
+		dataType: double
+		lineageTag: 29c23c26-ff88-47ca-aef9-26fdffe57def
+		summarizeBy: none
+		sourceColumn: ROIPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition vw_ai_productivity_curated = m
+		mode: import
+		source =
+				let
+				    Origen = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"ai-productivity-roi_Database" = Origen{[Name="ai-productivity-roi",Kind="Database"]}[Data],
+				    ai_productivity_Schema = #"ai-productivity-roi_Database"{[Name="ai_productivity",Kind="Schema"]}[Data],
+				    vw_ai_productivity_curated_View = ai_productivity_Schema{[Name="vw_ai_productivity_curated",Kind="View"]}[Data]
+				in
+				    vw_ai_productivity_curated_View
+
+	annotation PBI_ResultType = Table
+

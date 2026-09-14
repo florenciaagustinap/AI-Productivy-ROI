@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "4348ae81ac4453f6f176",
+  "position": {
+    "x": 220,
+    "y": 56,
+    "z": 0,
+    "width": 202,
+    "height": 100,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Horas Ahorradas"
+                }
+              },
+              "queryRef": "_Medidas.Horas Ahorradas",
+              "nativeQueryRef": "Horas Ahorradas"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

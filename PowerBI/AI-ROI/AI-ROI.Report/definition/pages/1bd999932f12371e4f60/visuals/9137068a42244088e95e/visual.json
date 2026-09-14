@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "9137068a42244088e95e",
+  "position": {
+    "x": 650,
+    "y": 448,
+    "z": 0,
+    "width": 620,
+    "height": 260,
+    "tabOrder": 15
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "1) El costo de licencias de IA está modelado por Herramienta (valor fijo mensual), no por Empleado ni por Departamento. Por lo tanto este reporte NO muestra ROI% ni costo por empleado o por departamento: hacerlo requeriría inventar una distribución de costos que no existe en los datos de origen. 2) 'Valor estimado por empleado' (Página 4) es una estimación de productividad (horas ahorradas × tarifa horaria), distinta del costo de licencias, y sí es agregable de forma segura por empleado. 3) Las tablas RAW, Staging y el fact de grano evento se mantienen ocultas por ser capas técnicas intermedias; el reporte consume únicamente las vistas curated y de negocio ya validadas. 4) Ningún dato original fue alterado ni inventado para construir este reporte.",
+                    "textStyle": {
+                      "fontSize": "10px",
+                      "fontWeight": "normal",
+                      "color": "#5B6478",
+                      "fontFamily": "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "33e3123bfa54c839345f",
+  "position": {
+    "x": 920,
+    "y": 4,
+    "z": 0,
+    "width": 350,
+    "height": 46,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "No incluye ROI ni costo por empleado: el costo de licencias es por herramienta, no por persona.",
+                    "textStyle": {
+                      "fontSize": "9px",
+                      "fontWeight": "normal",
+                      "color": "#EB6834",
+                      "fontFamily": "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "3b8da411841aa828364e",
+  "position": {
+    "x": 650,
+    "y": 344,
+    "z": 0,
+    "width": 620,
+    "height": 64,
+    "tabOrder": 11
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "500 registros de uso validados sobre el período analizado; 48 combinaciones Año-Mes-Herramienta en el control de costos (4 herramientas × 12 meses).",
+                    "textStyle": {
+                      "fontSize": "10px",
+                      "fontWeight": "normal",
+                      "color": "#5B6478",
+                      "fontFamily": "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "02966c70b6c6de62a14c",
+  "position": {
+    "x": 10,
+    "y": 606,
+    "z": 0,
+    "height": 108,
+    "width": 1260,
+    "tabOrder": 20
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Insights clave: sobre 500 registros analizados, el uso de IA generó un ahorro promedio de 50.56 horas por registro y una mejora de productividad promedio de 30.69%. Se automatizaron 2.724 procesos y se registró un incremento de 25.255 tareas completadas. El valor de productividad estimado asciende a $1.268.107,30, frente a un costo de licencias de $6.000, resultando en un beneficio neto estimado de $1.262.107,30 y un ROI estimado de 21.035,12%.",
+                    "textStyle": {
+                      "fontFamily": "Segoe UI",
+                      "fontSize": "11px",
+                      "color": "#5b6478"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

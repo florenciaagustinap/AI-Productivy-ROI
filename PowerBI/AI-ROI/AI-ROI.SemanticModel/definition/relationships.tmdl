@@ -1,0 +1,165 @@
+relationship 1bb16a90-a2b1-4a9d-b668-973b9d31473a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vw_ai_productivity.Date
+	toColumn: LocalDateTable_e0044898-6805-4e11-a823-8427cbb5364c.Date
+
+relationship ce26fc6f-ac4c-4ff8-b6dd-dd0f869dc869
+	joinOnDateBehavior: datePartOnly
+	fromColumn: vw_ai_productivity_curated.Date
+	toColumn: LocalDateTable_01265b39-fa97-4c34-8695-f5b146e9c986.Date
+
+relationship a02668e4-d219-42c8-9ffd-418b572c6bd3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_date.Date
+	toColumn: LocalDateTable_517aab33-8d77-4ec5-ab98-672dc66e392f.Date
+
+relationship 129fd52d-b6be-44aa-b4bf-e80833a2eba2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_employee.HireDate
+	toColumn: LocalDateTable_88283095-a40d-47c4-b608-2641bd78079c.Date
+
+relationship bcd2094b-19e4-4130-89f8-fb19b31b7421
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_ai_usage.Date
+	toColumn: LocalDateTable_ecc5d65b-8373-4c3b-bdc4-aed7daf85e85.Date
+
+relationship 63d2ee9a-9972-4c6c-b1cd-2687d3e8d8b7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: raw_ai_usage.Date
+	toColumn: LocalDateTable_f506c2d1-b80b-4f1e-b4dc-dca712a44e9f.Date
+
+relationship 395e67f4-5928-41e7-8745-469cc9603e32
+	joinOnDateBehavior: datePartOnly
+	fromColumn: raw_ai_usage.HireDate
+	toColumn: LocalDateTable_f229d9a5-b6d1-454e-b10e-5d53137c869b.Date
+
+relationship 34d13795-9f52-47e6-ac8c-10f623320ac4
+	joinOnDateBehavior: datePartOnly
+	fromColumn: stg_ai_usage.Date
+	toColumn: LocalDateTable_36ea0cae-b135-45e2-8f2b-ed2b51d2005c.Date
+
+relationship AutoDetected_cae6200a-4bc4-4a30-a89a-61d233b4ce5f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: vw_ai_productivity_curated.UsageID
+	toColumn: vw_ai_productivity.UsageID
+
+relationship AutoDetected_d336ebb9-f29c-49d9-a1ae-45f570f93a21
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: fact_ai_usage.UsageID
+	toColumn: vw_ai_productivity.UsageID
+
+relationship AutoDetected_29371659-c56a-4449-b274-810b82582828
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: raw_ai_usage.UsageID
+	toColumn: vw_ai_productivity.UsageID
+
+relationship AutoDetected_bb2436da-f1c1-42c6-bd8f-1e58c97284b2
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: stg_ai_usage.UsageID
+	toColumn: vw_ai_productivity.UsageID
+
+relationship AutoDetected_24c0e4f2-a8e6-4d56-922f-a39d6afb370e
+	fromColumn: vw_ai_productivity.EmployeeID
+	toColumn: dim_employee.EmployeeID
+
+relationship AutoDetected_cedb66af-77a3-4bf0-ab0b-f50bbdc9e5af
+	isActive: false
+	fromColumn: vw_ai_productivity_curated.EmployeeID
+	toColumn: dim_employee.EmployeeID
+
+relationship AutoDetected_80d41d8d-42da-4c2b-8ecb-18c9ef0fa219
+	isActive: false
+	fromColumn: fact_ai_usage.EmployeeID
+	toColumn: dim_employee.EmployeeID
+
+relationship AutoDetected_2f0a1992-1724-41ec-8daf-f6192d3a2df0
+	isActive: false
+	fromColumn: raw_ai_usage.EmployeeID
+	toColumn: dim_employee.EmployeeID
+
+relationship AutoDetected_6b7548fe-8502-44c9-8406-091524e85bea
+	isActive: false
+	fromColumn: stg_ai_usage.EmployeeID
+	toColumn: dim_employee.EmployeeID
+
+relationship AutoDetected_1e8dcec1-67a4-40da-998d-03118d1f341a
+	fromColumn: vw_ai_productivity.DepartmentID
+	toColumn: dim_department.DepartmentID
+
+relationship AutoDetected_ca5ead8b-70cf-47ab-bcba-906fd7201334
+	isActive: false
+	fromColumn: vw_ai_productivity_curated.DepartmentID
+	toColumn: dim_department.DepartmentID
+
+relationship AutoDetected_4b932bbf-ac38-4710-b8a4-9174ad5f8a30
+	isActive: false
+	fromColumn: fact_ai_usage.DepartmentID
+	toColumn: dim_department.DepartmentID
+
+relationship AutoDetected_6c33df4a-67a9-45cd-aad1-aa37dbae7cae
+	isActive: false
+	fromColumn: raw_ai_usage.DepartmentID
+	toColumn: dim_department.DepartmentID
+
+relationship AutoDetected_98570e05-35b6-4952-b4b1-55699a0ff5f1
+	isActive: false
+	fromColumn: stg_ai_usage.DepartmentID
+	toColumn: dim_department.DepartmentID
+
+relationship AutoDetected_67c6f06c-3daf-411e-acde-6c64601c8888
+	fromColumn: vw_ai_productivity.ToolID
+	toColumn: dim_ai_tool.ToolID
+
+relationship AutoDetected_6fbce2a7-aa95-4b31-8456-57c6fdf1c371
+	isActive: false
+	fromColumn: vw_ai_productivity_curated.ToolID
+	toColumn: dim_ai_tool.ToolID
+
+relationship AutoDetected_4fda3e41-1cd6-426b-9323-3ac126a48480
+	fromColumn: vw_ai_roi.ToolID
+	toColumn: dim_ai_tool.ToolID
+
+relationship AutoDetected_db52b981-5268-404f-8d19-e111bbf572b5
+	fromColumn: vw_dashboard_roi.ToolID
+	toColumn: dim_ai_tool.ToolID
+
+relationship AutoDetected_d731e3e2-2693-40e6-93c9-922016eb4c15
+	isActive: false
+	fromColumn: fact_ai_usage.ToolID
+	toColumn: dim_ai_tool.ToolID
+
+relationship AutoDetected_78829e71-4b95-42d1-a8af-4b5b1c9b9ca7
+	isActive: false
+	fromColumn: raw_ai_usage.ToolID
+	toColumn: dim_ai_tool.ToolID
+
+relationship AutoDetected_ffe7088e-a797-4b34-84ef-d6abf03c78da
+	isActive: false
+	fromColumn: stg_ai_usage.ToolID
+	toColumn: dim_ai_tool.ToolID
+
+relationship AutoDetected_0e51000d-a6d9-48a3-8f50-0e9156e43d78
+	isActive: false
+	fromColumn: vw_ai_productivity_curated.NetValue
+	toColumn: vw_ai_roi.NetValue
+
+relationship AutoDetected_5a70d729-7ffc-43c0-b7cb-9fc84a4d0baa
+	isActive: false
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: vw_dashboard_roi.net_value
+	toColumn: vw_ai_roi.NetValue
+
+relationship vw_ai_productivity_Date_dim_date_Date
+	fromColumn: vw_ai_productivity.Date
+	toColumn: dim_date.Date
+
+relationship vw_dashboard_roi_YearMonthKey_dim_date_YearMonthKey
+	toCardinality: many
+	fromColumn: vw_dashboard_roi.YearMonthKey
+	toColumn: dim_date.YearMonthKey
+

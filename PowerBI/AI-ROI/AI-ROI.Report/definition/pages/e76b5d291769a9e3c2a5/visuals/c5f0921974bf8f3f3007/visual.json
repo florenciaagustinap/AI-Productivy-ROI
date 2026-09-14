@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "c5f0921974bf8f3f3007",
+  "position": {
+    "x": 435,
+    "y": 302,
+    "z": 0,
+    "height": 190,
+    "width": 410,
+    "tabOrder": 10
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_ai_tool"
+                    }
+                  },
+                  "Property": "ToolName"
+                }
+              },
+              "queryRef": "dim_ai_tool.ToolName",
+              "nativeQueryRef": "ToolName",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "% Automatización Promedio"
+                }
+              },
+              "queryRef": "_Medidas.% Automatización Promedio",
+              "nativeQueryRef": "% Automatización Promedio"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

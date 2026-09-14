@@ -1,0 +1,116 @@
+table stg_ai_usage
+	isHidden
+	lineageTag: 87957ed5-99da-4131-8a4a-58fe4935c09d
+
+	column UsageID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3b25f8b7-eb51-4812-b969-9cf1740da3ee
+		summarizeBy: none
+		sourceColumn: UsageID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: c30324aa-41f4-40fc-a8aa-482b44a36411
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variación
+			isDefault
+			relationship: 34d13795-9f52-47e6-ac8c-10f623320ac4
+			defaultHierarchy: LocalDateTable_36ea0cae-b135-45e2-8f2b-ed2b51d2005c.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column EmployeeID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e2ba3f8-d85d-433c-addb-9ee843526a88
+		summarizeBy: count
+		sourceColumn: EmployeeID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentID
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a2289e7-b513-4311-bc9b-a43461ebf22e
+		summarizeBy: count
+		sourceColumn: DepartmentID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ToolID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a26f1f4-6f35-4c96-a8a6-7d50b0ee74f9
+		summarizeBy: count
+		sourceColumn: ToolID
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksBeforeAI
+		dataType: int64
+		formatString: 0
+		lineageTag: b8f10673-7b48-41f8-8199-81b68f9944d8
+		summarizeBy: sum
+		sourceColumn: TasksBeforeAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column TasksAfterAI
+		dataType: int64
+		formatString: 0
+		lineageTag: 02a2f7e0-fdb9-459b-906f-803603c509cd
+		summarizeBy: sum
+		sourceColumn: TasksAfterAI
+
+		annotation SummarizationSetBy = Automatic
+
+	column HoursBeforeAI
+		dataType: double
+		lineageTag: 89de45bb-7803-4605-b4c3-37e77a568648
+		summarizeBy: sum
+		sourceColumn: HoursBeforeAI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column HoursAfterAI
+		dataType: double
+		lineageTag: 81cd25d2-3400-4569-8304-d95475ec287b
+		summarizeBy: sum
+		sourceColumn: HoursAfterAI
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProcessesAutomated
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d42111a-a925-4916-95e8-9809a339748a
+		summarizeBy: sum
+		sourceColumn: ProcessesAutomated
+
+		annotation SummarizationSetBy = Automatic
+
+	partition stg_ai_usage = m
+		mode: import
+		source =
+				let
+				    Origen = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"ai-productivity-roi_Database" = Origen{[Name="ai-productivity-roi",Kind="Database"]}[Data],
+				    ai_productivity_Schema = #"ai-productivity-roi_Database"{[Name="ai_productivity",Kind="Schema"]}[Data],
+				    stg_ai_usage_Table = ai_productivity_Schema{[Name="stg_ai_usage",Kind="Table"]}[Data]
+				in
+				    stg_ai_usage_Table
+
+	annotation PBI_ResultType = Table
+

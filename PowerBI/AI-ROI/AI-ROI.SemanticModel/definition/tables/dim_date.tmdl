@@ -1,0 +1,94 @@
+table dim_date
+	lineageTag: 1ca2a693-45ad-4cdc-9e64-0bc3dd93c4be
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isUnique
+		formatString: Long Date
+		lineageTag: e91446b9-446f-4396-9ac4-0c5eb6ac6bcb
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variación
+			isDefault
+			relationship: a02668e4-d219-42c8-9ffd-418b572c6bd3
+			defaultHierarchy: LocalDateTable_517aab33-8d77-4ec5-ab98-672dc66e392f.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 620b63b9-492f-41a0-8313-205d725cfd23
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e125afd-a0ac-498b-8635-e70c1806995a
+		summarizeBy: sum
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 644f9ea0-4252-4d32-b96d-c4feb4977e9f
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthName
+		dataType: string
+		lineageTag: 92e64217-7c6d-4744-9416-30702d5fee1a
+		summarizeBy: none
+		sourceColumn: MonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		dataType: int64
+		formatString: 0
+		lineageTag: 3df3866e-883a-48aa-a7a1-3f694098dd28
+		summarizeBy: sum
+		sourceColumn: Day
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: bdfaff7a-84ff-4f18-8c3e-3e4badf74059
+		summarizeBy: sum
+		sourceColumn: DayOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonthKey = [Year] * 100 + [Month]
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 947f5c48-1b93-4e18-a510-1d010b28a69f
+		summarizeBy: none
+
+	partition dim_date = m
+		mode: import
+		source =
+				let
+				    Origen = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"ai-productivity-roi_Database" = Origen{[Name="ai-productivity-roi",Kind="Database"]}[Data],
+				    ai_productivity_Schema = #"ai-productivity-roi_Database"{[Name="ai_productivity",Kind="Schema"]}[Data],
+				    dim_date_Table = ai_productivity_Schema{[Name="dim_date",Kind="Table"]}[Data]
+				in
+				    dim_date_Table
+
+	annotation PBI_ResultType = Table
+

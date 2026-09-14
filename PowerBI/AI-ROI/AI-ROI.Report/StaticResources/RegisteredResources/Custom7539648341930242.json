@@ -1,0 +1,31 @@
+{
+  "name": "Custom",
+  "dataColors": [
+    "#2E6FE8",
+    "#6D4AE0",
+    "#EB6834",
+    "#1BAF7A",
+    "#5B6478",
+    "#744EC2",
+    "#D9B300",
+    "#D03B3B"
+  ],
+  "bad": "#D03B3B",
+  "good": "#1BAF7A",
+  "visualStyles": {
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F3F5FA"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}

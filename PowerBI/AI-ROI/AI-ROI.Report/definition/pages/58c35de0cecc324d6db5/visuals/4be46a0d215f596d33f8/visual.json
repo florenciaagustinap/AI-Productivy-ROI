@@ -1,0 +1,108 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "4be46a0d215f596d33f8",
+  "position": {
+    "x": 650,
+    "y": 536,
+    "z": 0,
+    "width": 620,
+    "height": 175,
+    "tabOrder": 17
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_ai_productivity_curated"
+                    }
+                  },
+                  "Property": "EmployeeName"
+                }
+              },
+              "queryRef": "vw_ai_productivity_curated.EmployeeName",
+              "nativeQueryRef": "EmployeeName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_ai_productivity_curated"
+                    }
+                  },
+                  "Property": "DepartmentName"
+                }
+              },
+              "queryRef": "vw_ai_productivity_curated.DepartmentName",
+              "nativeQueryRef": "DepartmentName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_ai_productivity_curated"
+                    }
+                  },
+                  "Property": "ToolName"
+                }
+              },
+              "queryRef": "vw_ai_productivity_curated.ToolName",
+              "nativeQueryRef": "ToolName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_ai_productivity_curated"
+                    }
+                  },
+                  "Property": "MonthName"
+                }
+              },
+              "queryRef": "vw_ai_productivity_curated.MonthName",
+              "nativeQueryRef": "MonthName"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_ai_productivity_curated"
+                    }
+                  },
+                  "Property": "HoursSaved"
+                }
+              },
+              "queryRef": "vw_ai_productivity_curated.HoursSaved",
+              "nativeQueryRef": "HoursSaved"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "vw_ai_productivity_curated"
+                    }
+                  },
+                  "Property": "ProductivityLiftPct"
+                }
+              },
+              "queryRef": "vw_ai_productivity_curated.ProductivityLiftPct",
+              "nativeQueryRef": "ProductivityLiftPct"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

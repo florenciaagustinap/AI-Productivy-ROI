@@ -1,0 +1,108 @@
+table vw_ai_roi
+	isHidden
+	lineageTag: d51370b4-6a11-4d82-baac-99fab8c5337e
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ca45a81-1113-4419-87da-55d93e71fcf7
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 2b68059d-4d76-44ac-a9d5-9cb2e981ebb2
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column ToolID
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e30ead7-dc7e-4680-a26b-2f894c7e1670
+		summarizeBy: none
+		sourceColumn: ToolID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ToolName
+		dataType: string
+		lineageTag: 5cea05da-8389-443c-beeb-b6c2275df8bb
+		summarizeBy: none
+		sourceColumn: ToolName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendor
+		dataType: string
+		lineageTag: 6a542743-36ad-4861-aa87-23397052b903
+		summarizeBy: none
+		sourceColumn: Vendor
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthlyLicenseCost
+		dataType: int64
+		formatString: 0
+		lineageTag: ac4a6f65-6c92-42e2-80a6-109175affa61
+		summarizeBy: sum
+		sourceColumn: MonthlyLicenseCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column EstimatedValue
+		dataType: double
+		lineageTag: 94ab1448-ebdc-4df0-88bd-d2fce7a96abf
+		summarizeBy: sum
+		sourceColumn: EstimatedValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AICost
+		dataType: int64
+		formatString: 0
+		lineageTag: beeac737-fa22-49a2-8c1e-91df732947a7
+		summarizeBy: sum
+		sourceColumn: AICost
+
+		annotation SummarizationSetBy = Automatic
+
+	column NetValue
+		dataType: double
+		lineageTag: 996a8a47-1886-464c-a1da-5e66de21fcba
+		summarizeBy: sum
+		sourceColumn: NetValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ROIPct
+		dataType: double
+		lineageTag: fd4bff51-63f2-481b-8c97-604108ddceea
+		summarizeBy: sum
+		sourceColumn: ROIPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition vw_ai_roi = m
+		mode: import
+		source =
+				let
+				    Origen = GoogleBigQuery.Database([Implementation="2.0"]),
+				    #"ai-productivity-roi_Database" = Origen{[Name="ai-productivity-roi",Kind="Database"]}[Data],
+				    ai_productivity_Schema = #"ai-productivity-roi_Database"{[Name="ai_productivity",Kind="Schema"]}[Data],
+				    vw_ai_roi_View = ai_productivity_Schema{[Name="vw_ai_roi",Kind="View"]}[Data]
+				in
+				    vw_ai_roi_View
+
+	annotation PBI_ResultType = Table
+

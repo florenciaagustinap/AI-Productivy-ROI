@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "965b6e2d86d73c809a01",
+  "position": {
+    "x": 650,
+    "y": 74,
+    "z": 0,
+    "width": 620,
+    "height": 180,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "El modelo de datos registra el costo de licencias de IA a nivel Herramienta (valor fijo mensual por herramienta: ChatGPT, Microsoft Copilot, Gemini, Claude), no a nivel Empleado. Por lo tanto, no es posible calcular un ROI% ni un costo real por empleado sin inventar una distribución de costos que no existe en los datos de origen. Ver Página 5 · Acerca del Proyecto para más detalle sobre esta limitación documentada.",
+                    "textStyle": {
+                      "fontSize": "11px",
+                      "fontWeight": "normal",
+                      "color": "#5B6478",
+                      "fontFamily": "Segoe UI, wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

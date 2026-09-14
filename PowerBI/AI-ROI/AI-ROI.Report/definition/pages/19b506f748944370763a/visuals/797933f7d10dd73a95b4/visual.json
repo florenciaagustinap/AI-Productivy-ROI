@@ -1,0 +1,94 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "797933f7d10dd73a95b4",
+  "position": {
+    "x": 860,
+    "y": 520,
+    "z": 0,
+    "width": 410,
+    "height": 190,
+    "tabOrder": 14
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_ai_tool"
+                    }
+                  },
+                  "Property": "ToolName"
+                }
+              },
+              "queryRef": "dim_ai_tool.ToolName",
+              "nativeQueryRef": "ToolName"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Costo de IA"
+                }
+              },
+              "queryRef": "_Medidas.Costo de IA",
+              "nativeQueryRef": "Costo de IA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Valor de Productividad Estimado"
+                }
+              },
+              "queryRef": "_Medidas.Valor de Productividad Estimado",
+              "nativeQueryRef": "Valor de Productividad Estimado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "Beneficio Neto Estimado"
+                }
+              },
+              "queryRef": "_Medidas.Beneficio Neto Estimado",
+              "nativeQueryRef": "Beneficio Neto Estimado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Medidas"
+                    }
+                  },
+                  "Property": "ROI Estimado %"
+                }
+              },
+              "queryRef": "_Medidas.ROI Estimado %",
+              "nativeQueryRef": "ROI Estimado %"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
