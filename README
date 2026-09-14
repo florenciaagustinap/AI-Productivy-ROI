@@ -74,8 +74,9 @@ Tabla de hechos:
 ## Dashboard
 
 El análisis se encuentra implementado en un informe de Power BI.
+##Dashboard
 
-[PowerBI/AI-ROI/Screenshots/Dashboard.png]
+![Dashboard](./Screenshots/Dashboard.png]
 
 El dashboard presenta una visión ejecutiva de los principales indicadores y permite explorar la información mediante filtros y diferentes dimensiones de análisis.
 
